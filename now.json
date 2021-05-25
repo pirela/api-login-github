@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "src/index.js", "use": "@now/node@canary" }
+    ],
+    "routes": [{
+        "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+        },
+        "src": "/.*",
+        "dest": "src/index.js"
+    }],
+    "env": {
+      "NODE_ENV": "PRODUCTION",
+      "PORT": "4000",
+      "SECRET_API": "15662100",
+      "DB_NAME": "glimi_hello",
+      "DB_USERNAME": "glimi_user",
+      "DB_PASSWORD": "Glimi$156",
+      "DB_HOST": "162.214.175.105"
+    }
+  }
+
+
